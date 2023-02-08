@@ -17,7 +17,7 @@ const Update = ({ data, setData }) => {
       one: one,
       two: two,
     });
-    const res = await axios.post("https://mdm-calci.herokuapp.com/update", {
+    const res = await axios.post("https://mdm-calci.onrender.com/update", {
       id: id,
       one: one,
       two: two,

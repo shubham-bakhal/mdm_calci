@@ -16,7 +16,7 @@ function App() {
   const getData = async () => {
     try{
 
-      const res = await axios.get("https://mdm-calci.herokuapp.com/json");
+      const res = await axios.get("https://mdm-calci.onrender.com/json");
       console.log(res.data);
       setData(res.data.data);
     }catch(err){
