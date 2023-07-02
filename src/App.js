@@ -8,21 +8,21 @@ function App() {
   const [isUpdate, setIsUpdate] = useState(false);
   const [data, setData] = useState([]);
 
-  const handleUpdate = e => {
+  const handleUpdate = (e) => {
     e.preventDefault();
     setIsUpdate(!isUpdate);
   };
 
   const getData = async () => {
-    try{
-
+    try {
+      
       const res = await axios.get("https://mdm-calci.onrender.com/json");
       console.log(res.data);
       setData(res.data.data);
-    }catch(err){
+    } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   useEffect(() => {
     getData();
@@ -42,7 +42,7 @@ function App() {
             type="number"
             id="students"
             value={studentCnt}
-            onChange={e => setStudentCnt(e.target.value)}
+            onChange={(e) => setStudentCnt(e.target.value)}
             className="text-lg block
         w-full
         px-3
